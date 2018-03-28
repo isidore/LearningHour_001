@@ -20,11 +20,24 @@ TEST_CASE("Rol12") {
     b.roll(2);
     REQUIRE(b.score() == 3);
 }
+void require(bool b){
+}
+
+void betterName(int a, int b) {
+ // ... some code
+}
+void stupidName(int a, int b)
+{
+    betterName(a,b);
+
+    // cout << "betterName( "<< a
+}
 TEST_CASE("Rol00") {
     Bowling b;
     b.roll(0);
     b.roll(0);
-    REQUIRE(b.score() == 0);
+    REQUIRE(b.score() == 1);
+    require(b.score() == 1);
 }
 void assertBadRolls(std::vector<uint> pins) {
     bool error = false;
