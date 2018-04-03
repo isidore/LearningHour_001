@@ -1,4 +1,4 @@
-[koas](https://github.com/LearnWithLlew/python_koans)
+[koans](https://github.com/LearnWithLlew/python_koans)
 
 [pycharm community edition](https://www.jetbrains.com/pycharm/download/#section=mac)
 
