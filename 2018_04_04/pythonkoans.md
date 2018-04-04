@@ -8,7 +8,10 @@ http://github.com/isidore/LearningHour_001
 
 need to right click python3 directory and mark as code
 
-
+## Setup koans
+1. open parent directory
+2. Mark python3 as source root
+3. configure python interpreter 
 
 ## Steps
 1. Get Test to pass  
