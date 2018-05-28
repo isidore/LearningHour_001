@@ -80,8 +80,7 @@ void GildedRose::updateQuality()
 {
     for (int i = 0; i < items.size(); i++)
     {
-        auto foo =foo2;
-        foo(i, items);
+        foo2(i, items);
     }
 }
 
