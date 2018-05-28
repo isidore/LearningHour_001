@@ -7,7 +7,7 @@ void GildedRose::updateQuality()
 {
     for (int i = 0; i < items.size(); i++)
     {
-        auto foo = [&]() -> void {
+        auto foo = [this, &i]() -> void {
         if (items[i].name != "Aged Brie" && items[i].name != "Backstage passes to a TAFKAL80ETC concert")
         {
             if (items[i].quality > 0)
