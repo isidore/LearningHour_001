@@ -3,14 +3,6 @@
 
 using namespace std;
 
-class Shape{
-public:
-    int number;
-    virtual void print()  {
-        std::cout << "Hello I'm a shape " << number;
-    }
-};
-
 class Circle:  public Shape{
 public:
     Circle(){

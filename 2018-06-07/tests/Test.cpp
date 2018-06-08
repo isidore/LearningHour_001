@@ -1,63 +1,34 @@
 #include <iostream>
 #include "Catch.hpp"
 
-using namespace std;
-typedef  void (*printFunction)();
-class Shape {
-public:
-    int number;
-    printFunction print;
+#include "Shapes.h"
 
-    Shape() {
-        print = []() {
-            std::cout << "Hello I'm a shape " ;
-        };
-    }
-};
+using namespace std;
+
 
 class Circle : public Shape {
 public:
-    static void printMe() {
-        std::cout << "Hello I'm a circle ";
+    static void printMe(Shape& self,int value) {
+        std::cout << "Hello I'm a circle "  << self.lower << " to " << value;
     };
+
     Circle() {
-        number = 5;
-        print = printMe;
+        lower = 5;
+        printVirtual = printMe;
     }
 
 };
 
-void printByValue(Shape s) {
-    s.print();
+
+void setupShapes() {
+    registerShape(Circle());
 }
 
-void printByReference(Shape &s) {
-    s.print();
-}
 
-void printByPointer(Shape *s) {
-    s->print();
-}
-
-Shape getShape() {
-    return Circle();
-}
-
-Shape &getShapeByReference() {
-    auto c = new Circle();
-    return *(c);
-}
-
-Circle circle;
-
-Shape *getShapeByPointer() {
-    return &circle;
-}
 
 TEST_CASE("1st Test") {
- Shape s;
- Circle c;
- s = c;
- s.print();
+    setupShapes();
+    printByValue();
+
 
 }
